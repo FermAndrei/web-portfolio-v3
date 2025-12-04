@@ -43,7 +43,7 @@ const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="sticky z-50 top-0 w-full">
+    <div className="sticky z-50 top-0">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>

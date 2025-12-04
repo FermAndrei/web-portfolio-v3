@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.simple-bg {
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f4f6 30%, #1f2937 100%);
+}

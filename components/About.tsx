@@ -15,7 +15,6 @@ type CareerStat = {
   icon: string;
   value: number;
   label: string;
-  color: string;
 };
 
 type AboutProps = {
@@ -70,7 +69,7 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
             {careerStats.map((stat) => (
               <div
                 key={stat.id}
-                className="border rounded-lg p-4 
+                className="border-gray-900 border rounded-lg p-4 
                 hover:shadow-lg hover:scale-[1.02] 
                 hover:border-gray-500 
                 hover:bg-blue-50 dark:hover:bg-blue-900/20

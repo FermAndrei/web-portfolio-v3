@@ -124,3 +124,16 @@
 .simple-bg {
   background: linear-gradient(to bottom, #ffffff 0%, #f3f4f6 30%, #1f2937 100%);
 }
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 8s linear infinite;
+}

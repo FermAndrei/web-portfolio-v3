@@ -40,7 +40,7 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
   return (
     <>
       <div
-        className="max-w-[1000px] mt-5 mx-auto"
+        className="max-w-7xl mt-5 mx-auto"
         style={{ height: 100, position: "relative", overflow: "hidden" }}
       >
         <LogoLoop
@@ -56,7 +56,7 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ariaLabel="Technology partners"
         />
       </div>
-      <div className="grid grid-cols-2 gap-2 mx-auto max-w-[1000px] mt-10">
+      <div className="grid grid-cols-2 gap-2 mx-auto max-w-7xl mt-10">
         <h1 className="col-span-2 mx-auto text-3xl font-extrabold mb-4">
           ABOUT ME
         </h1>

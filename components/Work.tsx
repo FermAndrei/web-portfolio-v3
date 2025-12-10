@@ -52,7 +52,7 @@ const Work = () => {
     },
   ];
   return (
-    <div className="max-w-[1000px] mt-5 mx-auto">
+    <div className="max-w-7xl mt-5 mx-auto">
       <div className="relative w-full overflow-clip">
         <Timeline data={data} />
       </div>

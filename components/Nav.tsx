@@ -28,11 +28,11 @@ const Nav = () => {
       link: "#contact",
     },
     {
-      name: "Skills",
+      name: "Projects",
       link: "#contact",
     },
     {
-      name: "Projects",
+      name: "Skills",
       link: "#contact",
     },
     {

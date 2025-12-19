@@ -32,13 +32,13 @@ const Nav = () => {
       link: "#contact",
     },
     {
-      name: "Skills",
+      name: "Tools",
       link: "#contact",
     },
-    {
-      name: "Certifications",
-      link: "#contact",
-    },
+    // {
+    //   name: "Certifications",
+    //   link: "#contact",
+    // },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

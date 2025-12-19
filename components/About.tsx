@@ -5,7 +5,12 @@ import LogoLoop from "./LogoLoop";
 import {
   SiReact,
   SiNextdotjs,
-  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiBootstrap,
+  SiCss3,
+  SiFlutter,
+  SiDart,
   SiTailwindcss,
 } from "react-icons/si";
 import Image from "next/image";
@@ -24,17 +29,23 @@ type AboutProps = {
 
 const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
   const techLogos = [
-    { node: <SiReact />, title: "React", href: "https://react.dev" },
-    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-    {
-      node: <SiTypescript />,
-      title: "TypeScript",
-      href: "https://www.typescriptlang.org",
-    },
+    { node: <SiReact />, title: "React" },
+    { node: <SiNextdotjs />, title: "Next.js" },
     {
       node: <SiTailwindcss />,
       title: "Tailwind CSS",
-      href: "https://tailwindcss.com",
+    },
+    { node: <SiJavascript />, title: "Javascript" },
+    { node: <SiHtml5 />, title: "Html" },
+    {
+      node: <SiBootstrap />,
+      title: "Bootstrap",
+    },
+    { node: <SiCss3 />, title: "Css" },
+    { node: <SiFlutter />, title: "Flutter" },
+    {
+      node: <SiDart />,
+      title: "Dart",
     },
   ];
   return (
@@ -61,47 +72,45 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ABOUT ME
         </h1>
         <p className="whitespace-pre-line leading-relaxed">{aboutMeDesc}</p>
-        <div className="relative ">
+        {/* <div className="relative ">
           <Image src="/logo.png" alt="Logo" fill className="object-contain" />
-        </div>
-        <div className="col-span-2 mt-3">
-          <div className="grid grid-cols-4 gap-4">
-            {careerStats.map((stat) => (
-              <div
-                key={stat.id}
-                className="border-gray-900 border rounded-lg p-4 
+        </div> */}
+        <div className="grid grid-cols-2 gap-4 p-10">
+          {careerStats.map((stat) => (
+            <div
+              key={stat.id}
+              className="border-gray-900 border rounded-lg p-4 
                 hover:shadow-lg hover:scale-[1.02] 
                 hover:border-gray-500 
                 hover:bg-blue-50 dark:hover:bg-blue-900/20
                 transition-all duration-200"
-              >
-                <div className="flex items-center">
-                  <Image
-                    src={stat.icon}
-                    alt={stat.label}
-                    width={35}
-                    height={35}
-                    className="mr-2"
-                  />
-                  <CountUp
-                    from={0}
-                    to={stat.value}
-                    separator=","
-                    direction="up"
-                    duration={1}
-                    className="count-up-text text-2xl font-bold"
-                  />
-                  {stat.label === "Experience" && (
-                    <span className="ml-1 text-lg font-bold"> Years</span>
-                  )}
-                  {stat.label === "Technologies" && (
-                    <span className="text-lg font-bold">+</span>
-                  )}
-                </div>
-                <p className="text-2xl font-semibold">{stat.label}</p>
+            >
+              <div className="flex items-center">
+                <Image
+                  src={stat.icon}
+                  alt={stat.label}
+                  width={35}
+                  height={35}
+                  className="mr-2"
+                />
+                <CountUp
+                  from={0}
+                  to={stat.value}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text text-2xl font-bold"
+                />
+                {stat.label === "Experience" && (
+                  <span className="ml-1 text-lg font-bold"> Years</span>
+                )}
+                {stat.label === "Technologies" && (
+                  <span className="text-lg font-bold">+</span>
+                )}
               </div>
-            ))}
-          </div>
+              <p className="text-2xl font-semibold">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </>

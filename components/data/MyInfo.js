@@ -28,7 +28,7 @@ export const MyInfo = {
       id: 1,
       icon: "/portfolio.png",
       value: 2,
-      label: "Experience",
+      label: "Years Experience",
     },
     {
       id: 2,

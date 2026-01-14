@@ -22,10 +22,10 @@ const Project = ({ data }: { data: ProjectData[] }) => {
     <div className="max-w-7xl mx-auto">
       {/* Section header */}
       <div className="text-center">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl mx-auto">
+        <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl mx-auto">
           Projects
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm mx-auto">
+        <p className="text-neutral-300 dark:text-neutral-300 text-sm md:text-base max-w-sm mx-auto">
           Here you will find some of the personal projects I created.
         </p>
       </div>
@@ -34,17 +34,17 @@ const Project = ({ data }: { data: ProjectData[] }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {data.map((project) => (
           <CardContainer key={project.id} className="inter-var h-full">
-            <CardBody className=" bg-gray-50 relative min-h-[500px] group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-full h-full rounded-xl p-6 border">
+            <CardBody className="bg-neutral-800/30 relative min-h-[500px] group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-full h-full rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-white"
               >
                 {project.name}
               </CardItem>
               <CardItem
                 as="div"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-sm max-w-sm mt-2 text-neutral-300"
               >
                 <ExpandableText description={120}>
                   {project.description}
@@ -59,7 +59,7 @@ const Project = ({ data }: { data: ProjectData[] }) => {
                   alt="thumbnail"
                 />
               </CardItem>
-              <div className="flex gap-2 items-center mt-3">
+              <div className="flex gap-2 items-center mt-3 text-white">
                 {project.liveDemo === true ? (
                   <CardItem
                     translateZ={20}
@@ -82,11 +82,11 @@ const Project = ({ data }: { data: ProjectData[] }) => {
                 </CardItem>
               </div>
               <div className="flex flex-wrap items-center gap-1 mt-2">
-                <span className="text-xs ">Tech Use:</span>
+                <span className="text-xs text-white">Tech Use:</span>
                 {project.techUse.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 text-xs font-medium rounded-br-md bg-slate-100 text-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                    className="px-3 py-1 text-xs font-medium rounded-lg bg-neutral-800/30 text-slate-100 dark:bg-slate-900 dark:text-slate-200"
                   >
                     {tech}
                   </span>

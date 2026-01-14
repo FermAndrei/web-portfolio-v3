@@ -102,8 +102,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "1000px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start px-4 py-2 lg:flex dark:bg-g-950/70 backdrop-blur-md",
+        visible && "bg-neutral-800/40 dark:bg-neutral-950/80 rounded-full",
         className
       )}
     >
@@ -127,7 +127,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-4 py-2 text-white dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -235,8 +235,8 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <img src="../logo.png" alt="logo" width={30} height={30} />
-      <span className="font-medium text-black dark:text-white">
+      <img src="../logo-white.png" alt="logo" width={30} height={30} />
+      <span className="font-medium text-white dark:text-white">
         Ferm Andrei
       </span>
     </a>

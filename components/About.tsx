@@ -1,7 +1,6 @@
 "use client";
 
 import CountUp from "./CountUp";
-import LogoLoop from "./LogoLoop";
 import {
   SiReact,
   SiNextdotjs,
@@ -50,8 +49,8 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
   ];
   return (
     <>
-      <div
-        className="max-w-7xl mt-5 mx-auto"
+      {/* <div
+        className="max-w-7xl mt-5 mx-auto text-slate-300"
         style={{ height: 100, position: "relative", overflow: "hidden" }}
       >
         <LogoLoop
@@ -62,16 +61,16 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           gap={40}
           hoverSpeed={0}
           scaleOnHover
-          fadeOut
-          fadeOutColor="#ffffff"
           ariaLabel="Technology partners"
         />
-      </div>
-      <div className="grid grid-cols-2 gap-2 mx-auto max-w-7xl mt-10">
-        <h1 className="col-span-2 mx-auto text-3xl font-extrabold mb-4">
+      </div> */}
+      <div className="grid grid-cols-2 gap-2 mx-auto max-w-7xl mt-10 rounded-lg bg-neutral-800/30 backdrop-blur-md backdrop-saturate-150 p-5">
+        <h1 className="col-span-2 mx-auto text-3xl font-extrabold mb-4 text-white">
           ABOUT ME
         </h1>
-        <p className="whitespace-pre-line leading-relaxed">{aboutMeDesc}</p>
+        <p className="whitespace-pre-line leading-relaxed text-white">
+          {aboutMeDesc}
+        </p>
         {/* <div className="relative ">
           <Image src="/logo.png" alt="Logo" fill className="object-contain" />
         </div> */}
@@ -79,20 +78,25 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           {careerStats.map((stat) => (
             <div
               key={stat.id}
-              className="border-gray-900 border rounded-lg p-4 
-                hover:shadow-lg hover:scale-[1.02] 
-                hover:border-gray-500 
-                hover:bg-blue-50 dark:hover:bg-blue-900/20
-                transition-all duration-200"
+              className="w-60 rounded-lg px-6 py-2 font-medium
+                        text-white dark:text-black
+                        bg-neutral-800/30 dark:bg-white/70
+                        backdrop-blur-md backdrop-saturate-150
+                        border border-white/5
+                        shadow-[0_8px_32px_rgba(0,0,0,0.12)]
+                        transition-all duration-300
+                        hover:-translate-y-0.5
+                        hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
+                        dark:shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
             >
               <div className="flex items-center">
-                <Image
+                {/* <Image
                   src={stat.icon}
                   alt={stat.label}
                   width={35}
                   height={35}
                   className="mr-2"
-                />
+                /> */}
                 <CountUp
                   from={0}
                   to={stat.value}
@@ -101,14 +105,11 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
                   duration={1}
                   className="count-up-text text-2xl font-bold"
                 />
-                {stat.label === "Experience" && (
-                  <span className="ml-1 text-lg font-bold"> Years</span>
-                )}
                 {stat.label === "Technologies" && (
                   <span className="text-lg font-bold">+</span>
                 )}
               </div>
-              <p className="text-2xl font-semibold">{stat.label}</p>
+              <p className="text-lg font-semibold">{stat.label}</p>
             </div>
           ))}
         </div>

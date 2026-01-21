@@ -25,7 +25,7 @@ const ExpandableText = ({
       {showToggle && (
         <span
           onClick={toggleText}
-          className="text-green-200 text-xs cursor-pointer"
+          className="text-[#06b6d4] text-xs cursor-pointer"
         >
           {isExpanded ? "Show less" : "Show more"}
         </span>

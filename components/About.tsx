@@ -12,7 +12,7 @@ import {
   SiDart,
   SiTailwindcss,
 } from "react-icons/si";
-import Image from "next/image";
+import LogoLoop from "./LogoLoop";
 
 type CareerStat = {
   id: number;
@@ -64,48 +64,51 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ariaLabel="Technology partners"
         />
       </div> */}
-      <div className="gap-2 mx-auto max-w-7xl mt-10 ">
-        <div className="mx-4 rounded-lg bg-neutral-800/30 backdrop-blur-md backdrop-saturate-150 p-5">
-          <h1 className="text-center col-span-2 mx-auto text-3xl font-extrabold mb-4 text-white">
-            ABOUT ME
-          </h1>
-          <p className="whitespace-pre-line leading-relaxed text-white text-lg">
+      <div className="gap-4 mx-auto max-w-7xl mt-15">
+        <h1 className="text-center col-span-2 text-3xl lg:text-4xl font-extrabold mb-6 text-white">
+          About Me
+        </h1>
+        <hr className="line" />
+        <p className="text-white text-center font-semibold mt-6 text-md md:text-base lg:text-lg">
+          Here, you'll discover additional details about me, my professional
+          skills, and projects
+        </p>
+        <div className="grid lg:grid-cols-2 gap-4 mx-auto max-w-7xl mt-6 p-5">
+          <p className="backdrop-blur-md backdrop-saturate-150 rounded-lg p-6 bg-neutral-800/50 border border-cyan-500/20 whitespace-pre-line leading-relaxed text-white text-md md:text-base lg:text-lg font-normal">
             {aboutMeDesc}
           </p>
           {/* <div className="relative ">
           <Image src="/logo.png" alt="Logo" fill className="object-contain" />
         </div> */}
-          <div className="grid gap-4 p-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4">
             {careerStats.map((stat) => (
               <div
                 key={stat.id}
-                className="flex flex-col items-start rounded-lg px-6 py-4 font-medium
-             text-white dark:text-black
-             bg-neutral-800/30 dark:bg-white/70
-             backdrop-blur-md backdrop-saturate-150
-             border border-white/5"
+                className="flex flex-col items-center justify-center text-center
+        rounded-lg px-6 py-4 font-medium
+        text-slate-100
+        bg-neutral-800/50
+        backdrop-blur-md backdrop-saturate-150
+        border border-cyan-500/20"
               >
-                <div className="flex items-center">
-                  {/* <Image
-                  src={stat.icon}
-                  alt={stat.label}
-                  width={35}
-                  height={35}
-                  className="mr-2"
-                /> */}
+                <div className="flex items-center justify-center">
                   <CountUp
                     from={0}
                     to={stat.value}
                     separator=","
-                    direction="up"
                     duration={1}
-                    className="count-up-text text-2xl font-bold"
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400"
                   />
                   {stat.label === "Technologies" && (
-                    <span className="text-lg font-bold">+</span>
+                    <span className="ml-1 text-lg font-bold text-cyan-400">
+                      +
+                    </span>
                   )}
                 </div>
-                <p className="text-lg font-semibold">{stat.label}</p>
+
+                <p className="mt-2 text-md md:text-base lg:text-xl font-bold text-slate-300">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>

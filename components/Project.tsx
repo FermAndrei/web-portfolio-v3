@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import ExpandableText from "./ui/ExpandableText";
 import StarBorder from "./StarBorder";
@@ -18,23 +20,28 @@ export type ProjectData = {
 };
 
 const Project = ({ data }: { data: ProjectData[] }) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? data : data.slice(0, 3);
+
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-15">
       {/* Section header */}
       <div className="text-center">
-        <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl mx-auto">
+        <h2 className="text-3xl lg:text-4xl text-white font-extrabold max-w-4xl mb-6 mx-auto">
           Projects
         </h2>
-        <p className="text-neutral-300 dark:text-neutral-300 text-sm md:text-base max-w-sm mx-auto">
+        <hr className="line" />
+        <p className="text-white text-md md:text-base lg:text-lg max-w-sm mx-auto mt-6 mb-10 font-semibold">
           Here you will find some of the personal projects I created.
         </p>
       </div>
 
       {/* Grid wrapper for cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {data.map((project) => (
+        {visibleProjects.map((project) => (
           <CardContainer key={project.id} className="inter-var h-full">
-            <CardBody className="bg-neutral-800/30 relative min-h-[500px] group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 dark:bg-black dark:border-white/20 border-black/10 w-full h-full rounded-xl p-6 border">
+            <CardBody className="bg-neutral-800/50 relative min-h-[500px] group/card border-cyan-500/20 w-full h-full rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-white"
@@ -44,7 +51,7 @@ const Project = ({ data }: { data: ProjectData[] }) => {
               <CardItem
                 as="div"
                 translateZ="60"
-                className="text-sm max-w-sm mt-2 text-neutral-300"
+                className="text-base max-w-sm mt-2 text-neutral-300"
               >
                 <ExpandableText description={120}>
                   {project.description}
@@ -96,6 +103,26 @@ const Project = ({ data }: { data: ProjectData[] }) => {
           </CardContainer>
         ))}
       </div>
+
+      {data.length > 3 && (
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="
+        px-8 py-3 rounded-lg font-semibold
+        text-white
+        bg-neutral-800/40
+        backdrop-blur-md backdrop-saturate-150
+        border border-cyan-500/20
+        transition-all duration-300
+        hover:-translate-y-0.5
+        hover:bg-neutral-700/40
+      "
+          >
+            {showAll ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

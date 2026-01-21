@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Nav from "@/components/Nav";
 import About from "@/components/About";
 import { MyInfo } from "@/components/data/MyInfo";
 import Work from "@/components/Work";
@@ -12,12 +11,21 @@ export default function Home() {
 
   return (
     <>
-      <Nav />
-      <Hero />
-      <About aboutMeDesc={aboutMeDesc} careerStats={careerStats} />
-      <Work />
-      <Project data={ProjectData} />
-      <Skills data={techStacks} />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="about">
+        <About aboutMeDesc={aboutMeDesc} careerStats={careerStats} />
+      </section>
+      <section id="work">
+        <Work />
+      </section>
+      <section id="project">
+        <Project data={ProjectData} />
+      </section>
+      <section id="tool">
+        <Skills data={techStacks} />
+      </section>
     </>
   );
 }

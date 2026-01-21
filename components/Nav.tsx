@@ -17,23 +17,23 @@ const Nav = () => {
   const navItems = [
     {
       name: "Home",
-      link: "#features",
+      link: "#home",
     },
     {
       name: "About",
-      link: "#pricing",
+      link: "#about",
     },
     {
       name: "Work",
-      link: "#contact",
+      link: "#work",
     },
     {
       name: "Projects",
-      link: "#contact",
+      link: "#project",
     },
     {
       name: "Tools",
-      link: "#contact",
+      link: "#tool",
     },
     // {
     //   name: "Certifications",
@@ -73,7 +73,7 @@ const Nav = () => {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-neutral-300"
               >
                 <span className="block">{item.name}</span>
               </a>

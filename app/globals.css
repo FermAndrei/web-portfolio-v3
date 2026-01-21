@@ -137,3 +137,18 @@
 .spin-slow {
   animation: spin-slow 8s linear infinite;
 }
+
+.line {
+  border: 3px solid #06b6d4;
+  border-radius: 4px;
+  max-width: 2rem;
+  margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}

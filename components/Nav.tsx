@@ -12,35 +12,19 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import PdfModal from "@/components/PdfModal";
 
 const Nav = () => {
   const navItems = [
-    {
-      name: "Home",
-      link: "#home",
-    },
-    {
-      name: "About",
-      link: "#about",
-    },
-    {
-      name: "Work",
-      link: "#work",
-    },
-    {
-      name: "Projects",
-      link: "#project",
-    },
-    {
-      name: "Tools",
-      link: "#tool",
-    },
-    // {
-    //   name: "Certifications",
-    //   link: "#contact",
-    // },
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Work", link: "#work" },
+    { name: "Projects", link: "#project" },
+    { name: "Tools", link: "#tool" },
   ];
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
     <div className="sticky z-50 top-0">
@@ -50,7 +34,12 @@ const Nav = () => {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary">Resume</NavbarButton>
+            <NavbarButton
+              variant="primary"
+              onClick={() => setIsResumeOpen(true)}
+            >
+              Resume
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -80,9 +69,12 @@ const Nav = () => {
             ))}
 
             <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
               variant="primary"
               className="w-full"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsResumeOpen(true);
+              }}
             >
               Resume
             </NavbarButton>
@@ -90,7 +82,11 @@ const Nav = () => {
         </MobileNav>
       </Navbar>
 
-      {/* Navbar */}
+      <PdfModal
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
+        pdfUrl="/Trillana, Ferm Andrei - Resume.pdf"
+      />
     </div>
   );
 };

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Ferm Andrei",
+  title: "Ferm Andrei - Portfolio",
   description: "Web-Portfolio-V3",
 };
 
@@ -31,16 +31,6 @@ export default function RootLayout({
       >
         <ScrollSpyProvider>
           <Nav />
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="fixed inset-0 -z-10 h-full w-full object-cover"
-          >
-            <source src="/background.mp4" type="video/mp4" />
-          </video>
-
           {children}
         </ScrollSpyProvider>
       </body>

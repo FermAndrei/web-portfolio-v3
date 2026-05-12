@@ -5,8 +5,17 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="relative mt-[-55px] h-screen flex flex-col items-center justify-center">
-      <div className="px-4 py-10 md:py-20">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-5xl md:text-6xl lg:text-7xl font-bold text-white ">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute z-0 inset-0 h-full w-full object-cover"
+      >
+        <source src="/background.mp4" type="video/mp4" />
+      </video>
+      <div className="relative z-10 px-4 py-10 md:py-20">
+        <h1 className="mx-auto max-w-4xl text-center text-5xl md:text-6xl lg:text-7xl font-bold text-white ">
           {"Hi, I'm".split(" ").map((word, index) => (
             <motion.span
               key={index}

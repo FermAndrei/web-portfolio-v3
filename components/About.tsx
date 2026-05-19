@@ -65,21 +65,21 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ariaLabel="Technology partners"
         />
       </div> */}
-      <div className="gap-4 mx-auto max-w-7xl p-16">
+      <div className="gap-4 mx-auto max-w-7xl p-8 md:p-12 lg:p-16">
         <h1 className="text-center col-span-2 text-3xl lg:text-5xl font-extrabold text-black">
           About Me
         </h1>
         <hr className="line" />
-        <p className="text-slate-300 text-center text-md md:text-base lg:text-xl font-medium">
+        <p className="text-slate-300 text-center text-md md:text-base lg:text-xl font-semibold">
           Here, you'll discover additional details about me, my professional
           skills, and projects
         </p>
-        <div className="flex flex-row gap-16 items-center justify-center mx-auto max-w-5xl mt-10">
+        <div className="flex md:flex-row flex-col gap-5 lg:gap-16 items-center justify-center mx-auto max-w-5xl mt-5 lg:mt-10">
           <div className="flex flex-col items-center shrink-0 p-4">
             <img
               src="../OIP.jpg"
               alt=""
-              className="rounded-full w-[280px] h-[280px] object-cover shadow-[0_0_20px_8px_rgba(39,234,254,0.8)] mb-6"
+              className="rounded-full w-[260px] h-[260px] md:w-[270px] md:h-[270px] lg:w-[280px] lg:h-[280px] object-cover shadow-[0_0_20px_8px_rgba(39,234,254,0.8)] mb-6"
             />
             <div className="flex gap-3 mt-4">
               <Button variant="outline">LinkedIn</Button>
@@ -87,13 +87,13 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
             </div>
           </div>
           <div className="flex-1">
-            <p className="whitespace-pre-line leading-relaxed text-slate-700 text-md md:text-base lg:text-lg font-normal">
+            <p className="whitespace-pre-line leading-relaxed text-slate-600 text-base md:text-md lg:text-lg font-medium">
               {aboutMeDesc}
             </p>
           </div>
         </div>
 
-        <div className="flex max-w-5xl mx-auto divide-x divide-cyan-500/20 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0 max-w-5xl mx-auto md:divide-x md:divide-cyan-500/20 mt-10">
           {careerStats.map((stat) => (
             <div
               key={stat.id}

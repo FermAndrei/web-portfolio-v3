@@ -28,11 +28,11 @@ const Project = ({ data }: { data: ProjectData[] }) => {
     <div className="max-w-7xl mx-auto mt-15">
       {/* Section header */}
       <div className="text-center">
-        <h2 className="text-3xl lg:text-4xl text-white font-extrabold max-w-4xl mb-6 mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-extrabold max-w-4xl mb-6 mx-auto">
           Projects
         </h2>
         <hr className="line" />
-        <p className="text-white text-md md:text-base lg:text-lg max-w-sm mx-auto mt-6 mb-10 font-semibold">
+        <p className="text-md md:text-base lg:text-lg text-slate-300 text-md max-w-sm mx-auto mt-6 mb-10 font-semibold">
           Here you will find some of the personal projects I created.
         </p>
       </div>

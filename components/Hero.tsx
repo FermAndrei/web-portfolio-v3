@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SoftAurora from "./SoftAurora";
 const Hero = () => {
   return (
-    <div className="relative mt-[-55px] h-screen flex flex-col items-center justify-center">
+    <div className="relative mt-[-88px] h-screen flex flex-col items-center justify-center">
       {/* <video
         autoPlay
         loop

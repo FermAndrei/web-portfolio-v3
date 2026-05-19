@@ -65,60 +65,60 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ariaLabel="Technology partners"
         />
       </div> */}
-      <div className="gap-4 mx-auto max-w-7xl mt-15">
-        <h1 className="text-center col-span-2 text-3xl lg:text-4xl font-extrabold mb-6 text-black">
+      <div className="gap-4 mx-auto max-w-7xl p-16">
+        <h1 className="text-center col-span-2 text-3xl lg:text-5xl font-extrabold text-black">
           About Me
         </h1>
         <hr className="line" />
-        <p className="text-black text-center font-semibold mt-6 text-md md:text-base lg:text-lg">
+        <p className="text-slate-300 text-center text-md md:text-base lg:text-xl font-medium">
           Here, you'll discover additional details about me, my professional
           skills, and projects
         </p>
-        <div className="flex">
-          <div>
+        <div className="flex flex-row gap-16 items-center justify-center mx-auto max-w-5xl mt-10">
+          <div className="flex flex-col items-center shrink-0 p-4">
             <img
               src="../OIP.jpg"
               alt=""
-              className="rounded-full w-100 h-100 object-cover"
+              className="rounded-full w-[280px] h-[280px] object-cover shadow-[0_0_20px_8px_rgba(39,234,254,0.8)] mb-6"
             />
-            <Button>LinkedIn</Button>
-            <Button>Github</Button>
-          </div>
-          <div className=" gap-4 mx-auto max-w-7xl mt-6 p-5">
-            <p className="backdrop-blur-md backdrop-saturate-150 rounded-lg p-6 whitespace-pre-line leading-relaxed text-black text-md md:text-base lg:text-lg font-normal">
-              {aboutMeDesc}
-            </p>
-            {/* <div className="relative ">
-          <Image src="/logo.png" alt="Logo" fill className="object-contain" />
-         </div> */}
-            <div className="flex w-full items-center divide-x divide-cyan-500/20">
-              {careerStats.map((stat) => (
-                <div
-                  key={stat.id}
-                  className="flex-1 flex-col items-center justify-center text-center"
-                >
-                  <div className="flex items-center justify-center">
-                    <CountUp
-                      from={0}
-                      to={stat.value}
-                      separator=","
-                      duration={1}
-                      className="text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400"
-                    />
-                    {stat.label === "Technologies" && (
-                      <span className="ml-1 text-lg font-bold text-cyan-400">
-                        +
-                      </span>
-                    )}
-                  </div>
-
-                  <p className="text-md md:text-base lg:text-xl font-bold text-slate-300">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+            <div className="flex gap-3 mt-4">
+              <Button variant="outline">LinkedIn</Button>
+              <Button variant="outline">Github</Button>
             </div>
           </div>
+          <div className="flex-1">
+            <p className="whitespace-pre-line leading-relaxed text-slate-700 text-md md:text-base lg:text-lg font-normal">
+              {aboutMeDesc}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex max-w-5xl mx-auto divide-x divide-cyan-500/20 mt-10">
+          {careerStats.map((stat) => (
+            <div
+              key={stat.id}
+              className="flex-1 flex-col items-center justify-center text-center"
+            >
+              <div className="flex items-center justify-center">
+                <CountUp
+                  from={0}
+                  to={stat.value}
+                  separator=","
+                  duration={1}
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-400"
+                />
+                {stat.label === "Technologies" && (
+                  <span className="ml-1 text-lg font-bold text-cyan-400">
+                    +
+                  </span>
+                )}
+              </div>
+
+              <p className="text-md md:text-base lg:text-xl font-bold text-slate-300">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </>

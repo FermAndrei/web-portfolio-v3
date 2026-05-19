@@ -66,7 +66,7 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
         />
       </div> */}
       <div className="gap-4 mx-auto max-w-7xl p-8 md:p-12 lg:p-16">
-        <h1 className="text-center col-span-2 text-3xl lg:text-5xl font-extrabold text-black">
+        <h1 className="text-center col-span-2 text-3xl lg:text-5xl font-extrabold">
           About Me
         </h1>
         <hr className="line" />

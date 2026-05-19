@@ -7,19 +7,19 @@ const Work = () => {
       title: "Feb 2024 - Sept 2025",
       content: (
         <div>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Build and enhance features based on business requirements.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Integrated API endpoints for loan features, including SSS
             validation and fee structure, improving loan processing speed by
             20%.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Used caching to improve the app’s load time by 22%, ensuring a
             smoother and faster startup experience for users.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Collaborated with QA and provided support during System
             Integration Testing (SIT) and User Acceptance Testing (UAT) cycles
             to resolve bugs and improve product quality.
@@ -31,19 +31,19 @@ const Work = () => {
       title: "April 2023 - May 2023",
       content: (
         <div>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Developed a CRUD Web Application using Sencha EXT JS following the
             MVVC architecture.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Gained hands-on experience in frontend development and working
             with JavaScript framework.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Worked on implementing data management, user interactions, and UI
             components.
           </p>
-          <p className="mb-2 text-md md:text-base lg:text-lg font-normal text-white">
+          <p className="mb-2 text-base md:text-md lg:text-lg  font-normal text-slate-600">
             - Collaborated with the other trainee to debug, test, and refine
             application features.
           </p>

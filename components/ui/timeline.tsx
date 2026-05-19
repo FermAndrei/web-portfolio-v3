@@ -38,11 +38,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pb-10 px-4 md:px-8 lg:px-10 text-center">
-        <h2 className="text-3xl lg:text-4xl text-white font-extrabold max-w-4xl mb-6 mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-extrabold max-w-4xl mb-6 mx-auto">
           Work Experience
         </h2>
         <hr className="line" />
-        <p className="text-white text-center font-semibold mt-6 text-md md:text-base lg:text-lg">
+        <p className="text-slate-300 text-center  text-md md:text-base lg:text-xl font-semibold mt-6 text-md">
           Here&apos;s a timeline of my journey.
         </p>
       </div>
@@ -54,13 +54,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-5 absolute left-3 md:left-3 w-5 rounded-full dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 font-bold text-white ">
+              <h3 className="hidden md:block text-xl md:pl-20 font-bold text-slate-700">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-white dark:text-neutral-500">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-slate-700 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}

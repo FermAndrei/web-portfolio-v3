@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import SoftAurora from "./SoftAurora";
 const Hero = () => {
   return (
     <div className="relative mt-[-55px] h-screen flex flex-col items-center justify-center">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -13,7 +13,25 @@ const Hero = () => {
         className="absolute z-0 inset-0 h-full w-full object-cover"
       >
         <source src="/background.mp4" type="video/mp4" />
-      </video>
+      </video> */}
+      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
+        <SoftAurora
+          speed={1.1}
+          scale={0.3}
+          brightness={0.5}
+          color1="#0a00ff"
+          color2="#08b3da"
+          noiseFrequency={1}
+          noiseAmplitude={1}
+          bandHeight={0.5}
+          bandSpread={1.5}
+          octaveDecay={0.34}
+          layerOffset={0.75}
+          colorSpeed={0.8}
+          enableMouseInteraction
+          mouseInfluence={0.2}
+        />
+      </div>
       <div className="relative z-10 px-4 py-10 md:py-20">
         <h1 className="mx-auto max-w-4xl text-center text-5xl md:text-6xl lg:text-7xl font-bold text-white ">
           {"Hi, I'm".split(" ").map((word, index) => (

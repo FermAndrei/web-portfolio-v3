@@ -5,6 +5,7 @@ import Work from "@/components/Work";
 import Project from "@/components/Project";
 import { ProjectData } from "@/components/data/ProjectData";
 import Skills from "@/components/Skills";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { aboutMeDesc, careerStats, techStacks } = MyInfo;
@@ -17,15 +18,16 @@ export default function Home() {
       <section id="about">
         <About aboutMeDesc={aboutMeDesc} careerStats={careerStats} />
       </section>
+      <section id="tool">
+        <Skills data={techStacks} />
+      </section>
       <section id="work">
         <Work />
       </section>
       <section id="project">
         <Project data={ProjectData} />
       </section>
-      <section id="tool">
-        <Skills data={techStacks} />
-      </section>
+      <Footer />
     </>
   );
 }

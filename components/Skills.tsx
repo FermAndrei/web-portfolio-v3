@@ -10,11 +10,9 @@ const Skills = ({ data }: { data: MySkill[] }) => {
   return (
     <div className="max-w-7xl mx-auto mt-15">
       <div className="text-center mb-8">
-        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-white">
-          Tools
-        </h2>
+        <h2 className="mb-6 text-3xl lg:text-5xl font-extrabold">Tools</h2>
         <hr className="line" />
-        <p className="text-white text-base md:text-lg max-w-lg mx-auto mt-6 mb-10 font-semibold">
+        <p className="text-slate-300 text-center text-md md:text-base lg:text-xl font-semibold max-w-xl mx-auto mt-6 mb-10">
           These are the technologies and tools I use to build modern,
           responsive, and user-focused web and mobile applications.
         </p>
@@ -40,7 +38,6 @@ const Skills = ({ data }: { data: MySkill[] }) => {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
   );
 };

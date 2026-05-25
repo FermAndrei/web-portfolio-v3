@@ -15,13 +15,13 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
-      <section id="about">
+      <section id="about" className="bg-gray-100/20">
         <About aboutMeDesc={aboutMeDesc} careerStats={careerStats} />
       </section>
-      <section id="tool">
+      <section id="tool" className="bg-gray-100/20">
         <Skills data={techStacks} />
       </section>
-      <section id="work">
+      <section id="work" className="bg-hex">
         <Work />
       </section>
       <section id="project">

@@ -65,12 +65,12 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
           ariaLabel="Technology partners"
         />
       </div> */}
-      <div className="gap-4 mx-auto max-w-7xl p-8 md:p-12 lg:p-16">
+      <div className="relative gap-4 mx-auto max-w-7xl px-4 md:px-8 lg:px-12 pt-12 md:pt-8 lg:pt-12">
         <h1 className="text-center col-span-2 text-3xl lg:text-5xl font-extrabold">
           About Me
         </h1>
         <hr className="line" />
-        <p className="text-slate-300 text-center text-md md:text-base lg:text-xl font-semibold">
+        <p className="text-slate-400 text-center text-md md:text-base lg:text-xl font-semibold">
           Here, you'll discover additional details about me, my professional
           skills, and projects
         </p>
@@ -82,8 +82,25 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
               className="rounded-full w-[260px] h-[260px] md:w-[270px] md:h-[270px] lg:w-[280px] lg:h-[280px] object-cover shadow-[0_0_20px_8px_rgba(39,234,254,0.8)] mb-6"
             />
             <div className="flex gap-3 mt-4">
-              <Button variant="outline">LinkedIn</Button>
-              <Button variant="outline">Github</Button>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/fermandrei/",
+                    "_blank",
+                  )
+                }
+              >
+                LinkedIn
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  window.open("https://github.com/FermAndrei", "_blank")
+                }
+              >
+                Github
+              </Button>
             </div>
           </div>
           <div className="flex-1">
@@ -92,8 +109,8 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
             </p>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0 max-w-5xl mx-auto md:divide-x md:divide-cyan-500/20 mt-10">
+        <hr className="border-t mt-5 border-t-cyan-500/50 mask-[linear-gradient(to_right,transparent,black,transparent)]" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0 max-w-5xl mx-auto md:divide-x md:divide-cyan-500/20 mt-5">
           {careerStats.map((stat) => (
             <div
               key={stat.id}
@@ -114,7 +131,7 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
                 )}
               </div>
 
-              <p className="text-md md:text-base lg:text-xl font-bold text-slate-300">
+              <p className="text-md md:text-base lg:text-xl font-bold text-slate-400">
                 {stat.label}
               </p>
             </div>

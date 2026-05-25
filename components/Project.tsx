@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import ExpandableText from "./ui/ExpandableText";
-import StarBorder from "./StarBorder";
 
 export type ProjectData = {
   slug: string;
@@ -25,7 +24,7 @@ const Project = ({ data }: { data: ProjectData[] }) => {
   const visibleProjects = showAll ? data : data.slice(0, 3);
 
   return (
-    <div className="max-w-7xl mx-auto mt-15">
+    <div className="max-w-7xl mx-auto">
       {/* Section header */}
       <div className="text-center">
         <h2 className="text-3xl lg:text-5xl font-extrabold max-w-4xl mb-6 mx-auto">

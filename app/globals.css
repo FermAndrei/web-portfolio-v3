@@ -121,10 +121,6 @@
   }
 }
 
-.simple-bg {
-  background: linear-gradient(to bottom, #ffffff 0%, #f3f4f6 30%, #1f2937 100%);
-}
-
 @keyframes spin-slow {
   0% {
     transform: rotate(0deg);
@@ -151,4 +147,13 @@ html {
 
 section {
   scroll-margin-top: 80px;
+}
+
+.bg-hex {
+  background-image: url("../public/Hexagon.svg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

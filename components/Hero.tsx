@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SoftAurora from "./SoftAurora";
+import Particles from "./Particles";
+
 const Hero = () => {
   return (
     <div className="relative mt-[-88px] h-screen flex flex-col items-center justify-center">
@@ -15,21 +16,19 @@ const Hero = () => {
         <source src="/background.mp4" type="video/mp4" />
       </video> */}
       <div style={{ width: "100%", height: "100%", position: "absolute" }}>
-        <SoftAurora
-          speed={1.1}
-          scale={0.3}
-          brightness={0.5}
-          color1="#0a00ff"
-          color2="#08b3da"
-          noiseFrequency={1}
-          noiseAmplitude={1}
-          bandHeight={0.5}
-          bandSpread={1.5}
-          octaveDecay={0.34}
-          layerOffset={0.75}
-          colorSpeed={0.8}
-          enableMouseInteraction
-          mouseInfluence={0.2}
+        <Particles
+          particleCount={250}
+          particleSpread={8}
+          speed={0.08}
+          particleColors={["#ffffff", "#ffffff", "#ffffff"]}
+          moveParticlesOnHover
+          particleHoverFactor={0.6}
+          alphaParticles={false}
+          particleBaseSize={60}
+          sizeRandomness={0.5}
+          cameraDistance={21}
+          disableRotation={false}
+          className={undefined}
         />
       </div>
       <div className="relative z-10 px-4 py-10 md:py-20">

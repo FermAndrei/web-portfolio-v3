@@ -20,7 +20,6 @@ const Nav = () => {
     { name: "About", link: "#about" },
     { name: "Work", link: "#work" },
     { name: "Projects", link: "#project" },
-    { name: "Tools", link: "#tool" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -9,14 +9,14 @@ type MySkill = {
 const Skills = ({ data }: { data: MySkill[] }) => {
   return (
     <div className="max-w-7xl mx-auto relative z-0 py-12 ">
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
         <h2 className="mb-6 text-3xl lg:text-5xl font-extrabold">Tools</h2>
         <hr className="line" />
         <p className="text-slate-400 text-center text-md md:text-base lg:text-xl font-semibold max-w-xl mx-auto mt-6 mb-10">
           These are the technologies and tools I use to build modern,
           responsive, and user-focused web and mobile applications.
         </p>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-4 lg:grid-cols-7 gap-4 justify-items-center max-w-[1000px] p-4 lg:p-0 mx-auto">
         {data.map((skills) => (

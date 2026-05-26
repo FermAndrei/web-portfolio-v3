@@ -22,7 +22,7 @@ const Skills = ({ data }: { data: MySkill[] }) => {
         {data.map((skills) => (
           <div
             key={skills.id}
-            className="flex flex-col items-center justify-center gap-3 group cursor-pointer w-full p-2 md:p-4 bg-slate-200/40 backdrop-blur-sm border rounded-2xl shadow-sm transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1"
+            className="flex flex-col items-center justify-center gap-3 group cursor-pointer w-full p-2 bg-slate-200/40 backdrop-blur-sm border rounded-2xl shadow-sm transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1"
           >
             {/* Icon Container: Forced to be a perfect square and perfectly centered */}
             <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-slate-100/50 rounded-xl transition-colors duration-300 group-hover:bg-cyan-500/10">

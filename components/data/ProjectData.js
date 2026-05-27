@@ -83,7 +83,7 @@ export const ProjectData = [
   },
   {
     id: 5,
-    name: "Disaster Response Application",
+    name: "Capstone Project",
     description:
       "Emergency and Disaster Response Application for Nagcarlan, Laguna is a community-focused system developed for the Bureau of Fire Protection (BFP) Nagcarlan to strengthen disaster preparedness and response. The application provides real-time updates during emergencies, allows residents to report incidents directly, and offers essential resources such as an emergency checklist and nearby evacuation center locations. Designed to support both responders and the community, it improves communication, safety awareness, and overall emergency coordination.",
     projectLink: "www.youtube.com",

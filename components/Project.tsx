@@ -53,7 +53,7 @@ const Project = ({ data }: { data: ProjectData[] }) => {
                 key={project.id}
                 className="pl-4 basis-full md:basis-1/2 lg:basis-1/3 flex"
               >
-                <div className="w-full my-2 flex flex-col flex-grow">
+                <div className="w-full my-2 flex flex-col flex-1">
                   <CardContainer className="inter-var w-full h-full">
                     <CardBody className="bg-slate-200/40 relative min-h-[520px] group/card w-full h-full rounded-xl p-6 border flex flex-col items-stretch">
                       <div className="flex flex-col flex-1">
@@ -131,7 +131,7 @@ const Project = ({ data }: { data: ProjectData[] }) => {
             ))}
           </CarouselContent>
 
-          <div className="flex justify-center gap-4 mt-10">
+          <div className="flex justify-center gap-4">
             <CarouselPrevious className="static md:absolute translate-y-0 text-cyan-400 border-cyan-500/50 hover:bg-cyan-700 hover:text-white transition-colors" />
             <CarouselNext className="static md:absolute translate-y-0 text-cyan-400 border-cyan-500/50 hover:bg-cyan-700 hover:text-white transition-colors" />
           </div>

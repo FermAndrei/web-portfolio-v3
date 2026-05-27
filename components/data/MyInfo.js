@@ -6,7 +6,7 @@ export const MyInfo = {
   birthDate: "12-17-1999",
   address: "Liliw, Laguna",
   aboutMeDesc:
-    "Hi, I’m Ferm, a front-end developer with practical experience in application development using Flutter. I’m passionate about designing clean, responsive, and intuitive interfaces that make digital experiences seamless and enjoyable. \n\nI also love exploring web development with React, building interactive components and websites that showcase both creativity and functionality. You can check out my projects to see what I’ve worked on and what I’m currently experimenting with. \n\nI’m open to opportunities where I can contribute, grow, and keep learning in a corporate setting. If you’re looking for someone curious, driven, and dedicated to crafting great user experiences, I’d be glad to connect.",
+    "Hi, I’m Ferm! I’m a front-end developer focused on building clean, responsive, and intuitive interfaces that make digital experiences seamless and enjoyable. While my core practical experience is in mobile application development using Flutter. \nI also love exploring web development with React, building interactive components and websites that showcase both creativity and functionality. You can check out my projects to see what I’ve worked on and what I’m currently experimenting with. \nI’m open to opportunities where I can contribute, grow, and keep learning in a corporate setting. If you’re looking for someone curious, driven, and dedicated to crafting great user experiences, I’d be glad to connect.",
   experience: [
     {
       title: "Application Developer",

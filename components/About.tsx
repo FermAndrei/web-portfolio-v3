@@ -14,6 +14,7 @@ import {
 } from "react-icons/si";
 import LogoLoop from "./LogoLoop";
 import { Button } from "@/components/ui/button";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 type CareerStat = {
   id: number;
@@ -90,7 +91,9 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
                     "_blank",
                   )
                 }
+                className="border-cyan-500/50 hover:bg-cyan-700 hover:text-white transition-colors"
               >
+                <FaLinkedin />
                 LinkedIn
               </Button>
               <Button
@@ -98,7 +101,9 @@ const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
                 onClick={() =>
                   window.open("https://github.com/FermAndrei", "_blank")
                 }
+                className="border-cyan-500/50 hover:bg-cyan-700 hover:text-white transition-colors"
               >
+                <FaGithub />
                 Github
               </Button>
             </div>

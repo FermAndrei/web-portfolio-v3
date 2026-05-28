@@ -1,6 +1,6 @@
 "use client";
 
-import CountUp from "./CountUp";
+import CountUp from "../components/CountUp";
 import {
   SiReact,
   SiNextdotjs,
@@ -12,7 +12,7 @@ import {
   SiDart,
   SiTailwindcss,
 } from "react-icons/si";
-import LogoLoop from "./LogoLoop";
+import LogoLoop from "../components/LogoLoop";
 import { Button } from "@/components/ui/button";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Particles from "./Particles";
+import Particles from "../components/Particles";
 
 const Hero = () => {
   return (
@@ -98,11 +98,11 @@ const Hero = () => {
           </a>
         </motion.div>
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-[#06b6d4] rounded-full flex items-center justify-center">
           <div className="w-1 h-2 bg-[#06b6d4] rounded-full animate-pulse" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

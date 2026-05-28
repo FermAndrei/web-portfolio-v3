@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import ExpandableText from "./ui/ExpandableText";
+import ExpandableText from "../components/ui/ExpandableText";
 import {
   Carousel,
   CarouselContent,
@@ -38,11 +38,11 @@ const Project = ({ data }: { data: ProjectData[] }) => {
           Here you will find some of the personal projects I created.
         </p>
       </div>
-
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10 relative">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-12 md:mt-10 relative">
         <Carousel
           opts={{
             align: "start",
+            loop: true,
           }}
           className="w-full"
         >

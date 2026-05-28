@@ -18,9 +18,11 @@ const Skills = ({ data }: { data: MySkill[] }) => {
         </p>
       </div> */}
       {/* <div className="flex max-w-5xl mx-auto"> */}
-      <h1 className="shrink-0 text-center mb-6 text-slate-400 text-md md:text-base lg:text-xl font-semibold mr-4">
+      <h1 className="text-center text-slate-600 col-span-2 text-xl lg:text-3xl font-extrabold">
         Tech Stacks
       </h1>
+      <hr className="line" />
+
       <div className="max-w-4xl mx-auto flex flex-wrap gap-2 justify-center">
         {data.map((skills) => (
           <div

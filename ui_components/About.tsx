@@ -29,26 +29,26 @@ type AboutProps = {
 };
 
 const About = ({ careerStats, aboutMeDesc }: AboutProps) => {
-  const techLogos = [
-    { node: <SiReact />, title: "React" },
-    { node: <SiNextdotjs />, title: "Next.js" },
-    {
-      node: <SiTailwindcss />,
-      title: "Tailwind CSS",
-    },
-    { node: <SiJavascript />, title: "Javascript" },
-    { node: <SiHtml5 />, title: "Html" },
-    {
-      node: <SiBootstrap />,
-      title: "Bootstrap",
-    },
-    { node: <SiCss3 />, title: "Css" },
-    { node: <SiFlutter />, title: "Flutter" },
-    {
-      node: <SiDart />,
-      title: "Dart",
-    },
-  ];
+  // const techLogos = [
+  //   { node: <SiReact />, title: "React" },
+  //   { node: <SiNextdotjs />, title: "Next.js" },
+  //   {
+  //     node: <SiTailwindcss />,
+  //     title: "Tailwind CSS",
+  //   },
+  //   { node: <SiJavascript />, title: "Javascript" },
+  //   { node: <SiHtml5 />, title: "Html" },
+  //   {
+  //     node: <SiBootstrap />,
+  //     title: "Bootstrap",
+  //   },
+  //   { node: <SiCss3 />, title: "Css" },
+  //   { node: <SiFlutter />, title: "Flutter" },
+  //   {
+  //     node: <SiDart />,
+  //     title: "Dart",
+  //   },
+  // ];
   return (
     <>
       {/* <div

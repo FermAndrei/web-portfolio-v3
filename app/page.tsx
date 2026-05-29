@@ -1,11 +1,11 @@
-import Hero from "@/pages/Hero";
-import About from "@/pages/About";
+import Hero from "@/ui_components/Hero";
+import About from "@/ui_components/About";
 import { MyInfo } from "@/components/data/MyInfo";
-import Work from "@/pages/Work";
-import Project from "@/pages/Project";
+import Work from "@/ui_components/Work";
+import Project from "@/ui_components/Project";
 import { ProjectData } from "@/components/data/ProjectData";
-import Skills from "@/pages/Skills";
-import Footer from "@/pages/Footer";
+import Skills from "@/ui_components/Skills";
+import Footer from "@/ui_components/Footer";
 
 export default function Home() {
   const { aboutMeDesc, careerStats, techStacks } = MyInfo;

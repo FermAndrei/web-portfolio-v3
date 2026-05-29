@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "@/pages/Footer";
+import Footer from "@/ui_components/Footer";
 
 type MySkill = {
   id: number;

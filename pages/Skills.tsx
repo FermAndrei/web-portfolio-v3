@@ -9,15 +9,6 @@ type MySkill = {
 const Skills = ({ data }: { data: MySkill[] }) => {
   return (
     <div className="max-w-7xl mx-auto relative z-0 py-12 md:px-6 px-2">
-      {/* <div className="text-center mb-8">
-        <h2 className="mb-6 text-3xl lg:text-5xl font-extrabold">Tools</h2>
-        <hr className="line" />
-        <p className="text-slate-400 text-center text-md md:text-base lg:text-xl font-semibold max-w-xl mx-auto mt-6 mb-10">
-          These are the technologies and tools I use to build modern,
-          responsive, and user-focused web and mobile applications.
-        </p>
-      </div> */}
-      {/* <div className="flex max-w-5xl mx-auto"> */}
       <h1 className="text-center text-slate-600 col-span-2 text-xl lg:text-3xl font-extrabold">
         Tech Stacks
       </h1>
@@ -43,7 +34,6 @@ const Skills = ({ data }: { data: MySkill[] }) => {
           </div>
         ))}
       </div>
-      {/* </div> */}
     </div>
   );
 };
